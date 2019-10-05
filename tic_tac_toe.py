@@ -1,3 +1,6 @@
+# TIC TAC TOE GAME
+# © Drew Goodman 2019
+
 space_list = [" "] * 9
 
 player_markers = {
