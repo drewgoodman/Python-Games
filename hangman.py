@@ -3,7 +3,7 @@
 
 from os import system, name
 
-hangman_art = HANGMANPICS = ['''
+hangman_art = ['''
   +---+
   |   |
       |
