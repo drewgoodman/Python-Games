@@ -1,6 +1,8 @@
 # TIC TAC TOE GAME
 # © Drew Goodman 2019
 
+from os import system, name
+
 space_list = [" "] * 9
 
 player_markers = {
@@ -13,7 +15,15 @@ victor = 0
 win_state = False
 turn_player = "0"
 
+def screen_clear():
+  if name == 'nt':
+    _ = system('cls')
+  else:
+    _ = system('clear')
+
+
 def board_render():
+  screen_clear()
   # global space_list
   layout = """
  +-----+-----+-----+
@@ -141,7 +151,9 @@ while win_state is False:
   turn_player = 1 if turn_player == 2 else 2
   moves_made += 1
   win_state = eval_board()
-  
+
+screen_clear()
+
 if (victor > 0):
   print("\n\n W E   H A V E   A   W I N N E R ! !")
 else:
