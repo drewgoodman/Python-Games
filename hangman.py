@@ -1,5 +1,5 @@
 # HANGMAN GAME
-# © Drew Goodman 2019
+# © Drew Goodman 2019, all rights reserved
 
 from os import system, name
 
@@ -124,6 +124,7 @@ def guess_letter(guess):
     else:
         guesses += 1
 
+
 def guess_word(guess):
     global game_state
     global victor
@@ -135,7 +136,6 @@ def guess_word(guess):
     else:
         input(f"Sorry, but {guess} isn't it. Press ENTER: ")
         guesses += 1
-    
 
 
 while game_state:

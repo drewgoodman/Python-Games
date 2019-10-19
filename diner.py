@@ -1,3 +1,5 @@
+# © Drew Goodman 2019, all rights reserved
+
 # Dinner Bottega Diner Have a Main Menu, and a Sides Menu You get one entree and two
 # side choices at regular cost.
 
@@ -33,7 +35,7 @@ import random
 import copy
 
 diner_cook_options = ["Rare","Medium","Medium Well","Well Done"]
-diner_burger_adds = ["Pepper Jack Cheese","Cheddar Cheese","Bacon"]
+diner_burger_adds = ["Pepper Jack Cheese","Cheddar Cheese","Bacon","Lettuce","Onions","Mushrooms"]
 diner_burger_adds_cost = 0.50
 diner_salad_dressings = ["Ranch","Lite Ranch","Thousand Island","Italian","Vinegarette"]
 
@@ -73,7 +75,7 @@ class Burger(Menu_Item):
         self.cook = None
         self.cook_options = diner_cook_options
         super().__init__(name, price)
-    
+
 
     def print_order(self):
         if self.cook and self.toppings:
@@ -204,7 +206,6 @@ def display_menu():
 
 
 display_menu()
-
 order_input = input("\nTo order: please enter the item No. to the left \nof the item, and then press ENTER:  ")
 
 while True:
